@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nails Galore | Luxury Nail Artistry Nagpur (5.0★)</title>
+  <meta name="description" content="Nails Galore in Sitabuldi, Nagpur. Minimalist, high-fashion bespoke nail art, soft gel extensions, custom press-on nails. 5.0★ rated.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            noir: {
+              950: '#0a0909',
+              900: '#121011',
+              800: '#1c191a',
+              700: '#2b2728',
+            },
+            sand: {
+              50: '#FAF9F6',
+              100: '#F5F2EC',
+              200: '#EBE5DA',
+              300: '#DDD4C4',
+            },
+            champagne: '#C5A880',
+          },
+          fontFamily: {
+            editorial: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-sand-50 text-noir-900 antialiased selection:bg-noir-900 selection:text-white">
+
+  <!-- Top Minimal Bar -->
+  <div class="bg-noir-950 text-stone-300 text-[11px] py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-950 border border-emerald-500/30 text-emerald-400 font-semibold text-[10px]">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Open Today · 10:30 AM – 8:30 PM
+        </span>
+        <span class="hidden sm:inline text-stone-500">|</span>
+        <span class="hidden sm:inline text-stone-400">2nd Floor, Rahul Bazar Complex, Sitabuldi, Nagpur</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.google.com/search?q=nails+galore+nagpur#lrd=0x3bd4c1c37e5586bd:0xac0ab2f3566ea2da,3,,," target="_blank" class="inline-flex items-center gap-1 text-amber-300 font-bold hover:underline">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-300"></i>
+          5.0 Rating (7 Reviews)
+        </a>
+        <a href="tel:07972622695" class="hidden sm:flex items-center gap-1 font-semibold text-stone-300 hover:text-white transition-colors">
+          <i data-lucide="phone" class="w-3 h-3 text-champagne"></i>
+          079726 22695
+        </a>
+        <a href="https://wa.me/917972622695?text=Hi%20Nails%20Galore%2C%20I%20want%20to%20book%20an%20appointment" target="_blank" class="hidden sm:flex items-center gap-1 font-semibold text-white hover:text-champagne transition-colors">
+          <i data-lucide="message-circle" class="w-3 h-3 text-emerald-400"></i>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-noir-900 text-sand-50 font-editorial font-bold text-lg flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+          N
+        </div>
+        <div>
+          <span class="font-editorial text-2xl font-bold tracking-tight text-noir-950 uppercase block leading-none">Nails Galore</span>
+          <span class="text-[9px] tracking-[0.25em] uppercase text-stone-500 font-semibold block mt-0.5">Bespoke Nails • Sitabuldi, Nagpur</span>
+        </div>
+      </a>
+
+      <!-- Minimal Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold text-stone-600">
+        <a href="#gallery" class="hover:text-noir-900 transition-colors">Visual Lookbook</a>
+        <a href="#menu" class="hover:text-noir-900 transition-colors">Services & Menu</a>
+        <a href="#feed" class="hover:text-noir-900 transition-colors">Studio Feed</a>
+        <a href="#reviews" class="hover:text-noir-900 transition-colors">Google Reviews (5.0★)</a>
+        <a href="#visit" class="hover:text-noir-900 transition-colors">Visit Studio</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:07972622695" class="px-4 py-2.5 rounded-full border border-stone-300 text-noir-950 text-xs uppercase tracking-wider font-bold hover:border-noir-950 transition-colors flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-champagne"></i>
+          <span>Call</span>
+        </a>
+        <button onclick="openBookingDrawer()" class="px-5 py-2.5 rounded-full bg-noir-950 text-white text-xs uppercase tracking-wider font-bold hover:bg-stone-800 transition-all shadow-sm flex items-center gap-2">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-champagne"></i>
+          <span>Book Session</span>
+        </button>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="mobile-toggle" class="md:hidden p-2 text-noir-900" aria-label="Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-5 space-y-4 shadow-xl">
+      <a href="#gallery" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-noir-900 py-1">Visual Lookbook</a>
+      <a href="#menu" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-noir-900 py-1">Services & Rates</a>
+      <a href="#feed" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-noir-900 py-1">Studio Feed</a>
+      <a href="#reviews" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-noir-900 py-1">Reviews (5.0★)</a>
+      <a href="#visit" class="mobile-link block text-sm font-semibold uppercase tracking-wider text-noir-900 py-1">Location & Timings</a>
+      <div class="pt-3 border-t border-stone-100 flex flex-col gap-2">
+        <button onclick="openBookingDrawer()" class="w-full py-3 rounded-xl bg-noir-950 text-white text-xs uppercase tracking-wider font-bold text-center">
+          Book Appointment
+        </button>
+        <a href="tel:07972622695" class="w-full py-2.5 rounded-xl border border-stone-300 text-noir-950 text-xs uppercase tracking-wider font-bold text-center block">
+          Call 079726 22695
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Editorial Visual Hero (High-Fashion Collage) -->
+  <section class="pt-10 pb-16 md:pt-16 md:pb-20 border-b border-stone-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
+        <!-- Punchy Minimal Hero Headline -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-200/80 text-[11px] font-bold uppercase tracking-wider text-noir-900">
+            <i data-lucide="sparkles" class="w-3 h-3 text-champagne"></i>
+            5.0★ Rated Nail Salon in Nagpur
+          </div>
+
+          <h1 class="font-editorial text-5xl sm:text-6xl lg:text-7xl font-light text-noir-950 leading-[1.05]">
+            Art on your <span class="italic font-normal">fingertips.</span>
+          </h1>
+
+          <p class="text-sm text-stone-600 max-w-lg leading-relaxed">
+            Minimalist editorial nail aesthetics, soft gel extensions, bespoke press-on nails, and precision manicures crafted for modern sophistication.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <button onclick="openBookingDrawer()" class="px-6 py-3 rounded-full bg-noir-950 text-white text-xs uppercase tracking-widest font-bold hover:bg-stone-800 transition-colors shadow">
+              Book Appointment
+            </button>
+            <a href="#gallery" class="px-5 py-3 rounded-full border border-stone-300 text-noir-900 text-xs uppercase tracking-widest font-semibold hover:border-noir-900 transition-colors">
+              Explore Photos ↓
+            </a>
+            <a href="https://www.google.com/search?q=nails+galore+nagpur#lrd=0x3bd4c1c37e5586bd:0xac0ab2f3566ea2da,3,,," target="_blank" class="px-4 py-3 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-900 text-xs uppercase tracking-wider font-bold hover:bg-amber-500/20 transition-colors flex items-center gap-1.5">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+              <span>Rate on Google</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Rating Callout Box -->
+        <div class="lg:col-span-5 flex lg:justify-end">
+          <div class="bg-white p-5 rounded-2xl border border-stone-200/90 shadow-sm flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-noir-950 text-amber-300 flex flex-col items-center justify-center font-editorial font-bold text-xl leading-none">
+              5.0
+              <span class="text-[9px] font-sans font-normal text-stone-400 mt-0.5">★★★★★</span>
+            </div>
+            <div>
+              <p class="font-bold text-noir-900 text-sm">Nails Galore</p>
+              <p class="text-xs text-stone-500">7 Google Reviews • Sitabuldi, Nagpur</p>
+              <p class="text-[11px] text-champagne font-semibold italic mt-0.5">"Professionally made and ate!! 🤏🏻💅🏻"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero 3-Photo Visual Collage -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+        <div class="photo-card h-80 sm:h-96" data-category="chrome" data-title="Gold French Tips & Blush Nude" data-meta="Almond Shape • 75 mins" data-price="₹1,799">
+          <img src="assets/images/hero.jpg" alt="Luxury French Manicure Nails Galore">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-champagne block">Signature Set</span>
+            <h3 class="font-editorial text-2xl font-normal">Gold French Manicure</h3>
+            <p class="text-xs text-stone-300">Tap to inspect photo →</p>
+          </div>
+        </div>
+
+        <div class="photo-card h-80 sm:h-96" data-category="sculpt" data-title="Silver Chrome Waves & Pearls" data-meta="Soft Gel Extensions • 80 mins" data-price="₹1,899">
+          <img src="assets/images/art-showcase.jpg" alt="Silver Chrome Waves & Pearl Nail Art">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-champagne block">Bespoke 3D Art</span>
+            <h3 class="font-editorial text-2xl font-normal">Chrome Wave & Pearls</h3>
+            <p class="text-xs text-stone-300">Tap to inspect photo →</p>
+          </div>
+        </div>
+
+        <div class="photo-card h-80 sm:h-96" data-category="pressons" data-title="Couture Reusable Press-On Kit" data-meta="Custom Molded Box • Reusable 5+ Times" data-price="₹1,299">
+          <img src="assets/images/press-ons.jpg" alt="Luxury Press On Nails Box Kit">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-champagne block">Handcrafted Press-Ons</span>
+            <h3 class="font-editorial text-2xl font-normal">Velvet Gift Set</h3>
+            <p class="text-xs text-stone-300">Tap to inspect photo →</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Photo-Heavy Visual Lookbook (12 High-Res Cards + Filters) -->
+  <section id="gallery" class="py-16 md:py-24 bg-white border-b border-stone-200 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header & Filter Pills -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="text-[11px] uppercase font-bold tracking-[0.25em] text-champagne block mb-1">Visual Gallery</span>
+          <h2 class="font-editorial text-4xl sm:text-5xl font-light text-noir-950">Lookbook & Sets</h2>
+          <p class="text-xs text-stone-500 mt-1">Tap any photo for full-screen inspection & instant WhatsApp booking.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2 text-xs">
+          <button class="filter-btn active px-4 py-2 rounded-full font-bold uppercase tracking-wider text-[11px]" data-category="all">All Photos</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-stone-200/70 text-stone-700 hover:bg-stone-300 font-bold uppercase tracking-wider text-[11px]" data-category="extensions">Soft Gels</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-stone-200/70 text-stone-700 hover:bg-stone-300 font-bold uppercase tracking-wider text-[11px]" data-category="chrome">Chrome Glaze</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-stone-200/70 text-stone-700 hover:bg-stone-300 font-bold uppercase tracking-wider text-[11px]" data-category="sculpt">3D & Decals</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-stone-200/70 text-stone-700 hover:bg-stone-300 font-bold uppercase tracking-wider text-[11px]" data-category="minimal">Minimal Nude</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-stone-200/70 text-stone-700 hover:bg-stone-300 font-bold uppercase tracking-wider text-[11px]" data-category="pressons">Press-On Sets</button>
+        </div>
+      </div>
+
+      <!-- 12 High-Impact Photo Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <!-- Photo 1: Hero Editorial -->
+        <div class="photo-card h-80" data-category="chrome extensions" data-title="Gold French Tips & Blush Nude" data-meta="Almond Shape • Gel Overlay" data-price="₹1,799">
+          <img src="assets/images/hero.jpg" alt="Gold French Tip Nails">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">Chrome French</span>
+            <h4 class="font-editorial text-xl font-normal">Gold French Manicure</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,799</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Gold French Manicure')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2: Chrome Waves & Pearls -->
+        <div class="photo-card h-80" data-category="sculpt extensions" data-title="Silver Chrome Waves & Pearls" data-meta="Soft Gel Extensions • 3D Sculpt" data-price="₹1,899">
+          <img src="assets/images/art-showcase.jpg" alt="Chrome Waves with Pearls">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">3D Sculpt</span>
+            <h4 class="font-editorial text-xl font-normal">Silver Chrome & Pearls</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,899</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Silver Chrome & Pearls')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3: Custom Press-on Kit -->
+        <div class="photo-card h-80" data-category="pressons" data-title="Couture Reusable Press-On Kit" data-meta="Velvet Jewelry Box • Custom Sized" data-price="₹1,299">
+          <img src="assets/images/press-ons.jpg" alt="Press On Nails Kit">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">Press-On Kit</span>
+            <h4 class="font-editorial text-xl font-normal">Velvet Press-On Box</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,299</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Velvet Press-On Box')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4: Studio Interior Sanctuary -->
+        <div class="photo-card h-80" data-category="extensions" data-title="Nails Galore Studio Sanctuary" data-meta="Hygienic Lounge • Sitabuldi" data-price="Salon Visit">
+          <img src="assets/images/studio.jpg" alt="Nails Galore Studio Interior">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">Studio Visit</span>
+            <h4 class="font-editorial text-xl font-normal">Sitabuldi Studio</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">Sitabuldi, Nagpur</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Studio Appointment')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 5: Vanilla Glazed Chrome -->
+        <div class="photo-card h-80" data-category="chrome" data-title="Vanilla Glazed Donut" data-meta="Almond Shape • High-Shine Powder" data-price="₹1,699">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=650&q=80" alt="Vanilla Glazed Donut Nails">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">Chrome</span>
+            <h4 class="font-editorial text-xl font-normal">Vanilla Glaze</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,699</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Vanilla Glaze')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 6: French Ombre Baby Boomer -->
+        <div class="photo-card h-80" data-category="extensions minimal" data-title="French Ombré Baby Boomer" data-meta="Coffin Shape • Gel Sculpt" data-price="₹2,199">
+          <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=650&q=80" alt="French Ombre Nails">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">Ombré</span>
+            <h4 class="font-editorial text-xl font-normal">Baby Boomer Fade</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹2,199</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Baby Boomer Fade')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 7: Rose Gold Swarovski -->
+        <div class="photo-card h-80" data-category="sculpt" data-title="Rose Gold Swarovski Studded" data-meta="Stiletto Shape • Full Crystal Decals" data-price="₹2,499">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=650&q=80" alt="Swarovski Studded Nails">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">3D Gem</span>
+            <h4 class="font-editorial text-xl font-normal">Rose Gold Crystal</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹2,499</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Rose Gold Crystal')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 8: Milky Sheer Nude Base -->
+        <div class="photo-card h-80" data-category="minimal" data-title="Milky Sheer Nude Base" data-meta="Natural Oval • Protective Gel" data-price="₹1,299">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=650&q=80" alt="Milky Sheer Nude">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">Minimal</span>
+            <h4 class="font-editorial text-xl font-normal">Milky Sheer Nude</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,299</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Milky Sheer Nude')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 9: Liquid Silver Chrome -->
+        <div class="photo-card h-80" data-category="chrome" data-title="Liquid Silver Mirror Chrome" data-meta="Square Shape • Metallic Powder" data-price="₹1,899">
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=650&q=80" alt="Liquid Silver Chrome">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">Chrome</span>
+            <h4 class="font-editorial text-xl font-normal">Liquid Silver</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,899</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Liquid Silver')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 10: Fine Line Abstract -->
+        <div class="photo-card h-80" data-category="minimal" data-title="Fine-Line Abstract Art" data-meta="Almond Shape • Hand Painted" data-price="₹1,599">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=650&q=80" alt="Abstract Line Nails">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">Minimal</span>
+            <h4 class="font-editorial text-xl font-normal">Fine Line Abstract</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,599</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Fine Line Abstract')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 11: Micro French Tip -->
+        <div class="photo-card h-80" data-category="minimal" data-title="Deep Burgundy Micro Tip" data-meta="Square Shape • Winter Edit" data-price="₹1,699">
+          <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=650&q=80" alt="Micro Tip French">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">French</span>
+            <h4 class="font-editorial text-xl font-normal">Burgundy Micro Tip</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹1,699</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Burgundy Micro Tip')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 12: 3D Acrylic Bloom -->
+        <div class="photo-card h-80" data-category="sculpt" data-title="3D Acrylic Floral Bloom" data-meta="Coffin Shape • Bridal Couture" data-price="₹2,499">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=650&q=80" alt="3D Floral Bloom">
+          <div class="photo-overlay"></div>
+          <div class="absolute bottom-3 left-4 right-4 text-white">
+            <span class="text-[9px] uppercase font-bold text-champagne tracking-wider">3D Sculpt</span>
+            <h4 class="font-editorial text-xl font-normal">Acrylic Floral Bloom</h4>
+            <div class="flex items-center justify-between text-xs mt-1">
+              <span class="text-stone-300">₹2,499</span>
+              <span class="card-book-trigger font-bold text-champagne hover:underline" onclick="event.stopPropagation(); openBookingDrawer('Acrylic Floral Bloom')">Book →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Essential Services Menu (Clean & Compact Table/Cards with all 10 Services) -->
+  <section id="menu" class="py-16 md:py-24 bg-sand-100 border-b border-stone-200 scroll-mt-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="text-[11px] uppercase font-bold tracking-[0.25em] text-champagne block mb-1">Pricing & Duration</span>
+        <h2 class="font-editorial text-4xl sm:text-5xl font-light text-noir-950">Essential Menu</h2>
+        <p class="text-xs text-stone-500 mt-1">Transparent pricing for all 10 signature services. No hidden salon surcharges.</p>
+      </div>
+
+      <!-- Minimal Table / Cards Layout (All 10 Core Services) -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm divide-y divide-stone-100">
+        
+        <!-- 1. Soft Gel Extensions -->
+        <div class="py-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-noir-900 text-sm">Soft Gel Extensions</h4>
+            <p class="text-xs text-stone-500">Lightweight full-cover tips sculpted to natural curve • Odor-free • 75 mins</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <span class="font-bold text-noir-900 text-base">₹1,799</span>
+            <button onclick="openBookingDrawer('Soft Gel Extensions')" class="px-4 py-2 rounded-full bg-noir-950 text-white text-xs font-semibold hover:bg-stone-800 transition-colors">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Nail Art -->
+        <div class="py-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-noir-900 text-sm">Bespoke Nail Art</h4>
+            <p class="text-xs text-stone-500">Hand-painted swirls, chrome powder glaze, French ombré & aura • 30 mins</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <span class="font-bold text-noir-900 text-base">₹499+</span>
+            <button onclick="openBookingDrawer('Bespoke Nail Art')" class="px-4 py-2 rounded-full bg-noir-950 text-white text-xs font-semibold hover:bg-stone-800 transition-colors">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Nail Extensions -->
+        <div class="py-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-noir-900 text-sm">Nail Extensions (Acrylic / Hard Gel)</h4>
+            <p class="text-xs text-stone-500">High-strength apex construction for statement length • 90 mins</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <span class="font-bold text-noir-900 text-base">₹1,999</span>
+            <button onclick="openBookingDrawer('Nail Extensions (Acrylic/Hard Gel)')" class="px-4 py-2 rounded-full bg-noir-950 text-white text-xs font-semibold hover:bg-stone-800 transition-colors">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Press on Nails -->
+        <div class="py-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-noir-900 text-sm">Custom Press On Nails Set</h4>
+            <p class="text-xs text-stone-500">Handcrafted salon-quality reusable luxury press-ons with velvet box & kit</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <span class="font-bold text-noir-900 text-base">₹1,299</span>
+            <button onclick="openBookingDrawer('Custom Press On Nails Set')" class="px-4 py-2 rounded-full bg-noir-950 text-white text-xs font-semibold hover:bg-stone-800 transition-colors">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Nail Decals -->
+        <div class="py-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-noir-900 text-sm">Nail Decals & 3D Charms</h4>
+            <p class="text-xs text-stone-500">Swarovski crystals, pearls, designer transfer foils & Korean 3D ribbons • 20 mins</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <span class="font-bold text-noir-900 text-base">₹299+</span>
+            <button onclick="openBookingDrawer('Nail Decals & 3D Charms')" class="px-4 py-2 rounded-full bg-noir-950 text-white text-xs font-semibold hover:bg-stone-800 transition-colors">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. Nail Designs -->
+        <div class="py-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-noir-900 text-sm">Themed Nail Designs</h4>
+            <p class="text-xs text-stone-500">Bridal Mehndi & Sangeet coordination, festival glam, Pinterest match • 50 mins</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <span class="font-bold text-noir-900 text-base">₹699+</span>
+            <button onclick="openBookingDrawer('Themed Nail Designs')" class="px-4 py-2 rounded-full bg-noir-950 text-white text-xs font-semibold hover:bg-stone-800 transition-colors">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- 7. Nail Painting (Gel Polish) -->
+        <div class="py-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-noir-900 text-sm">Nail Painting (Express Gel Polish)</h4>
+            <p class="text-xs text-stone-500">High-gloss chip-resistant UV/LED cured overlay on natural nails • 35 mins</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <span class="font-bold text-noir-900 text-base">₹799</span>
+            <button onclick="openBookingDrawer('Nail Painting (Gel Polish)')" class="px-4 py-2 rounded-full bg-noir-950 text-white text-xs font-semibold hover:bg-stone-800 transition-colors">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- 8. Nail Polish Changes -->
+        <div class="py-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-noir-900 text-sm">Nail Polish Changes</h4>
+            <p class="text-xs text-stone-500">Safe color removal, cuticle hydration oil, and fresh coat application • 25 mins</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <span class="font-bold text-noir-900 text-base">₹399</span>
+            <button onclick="openBookingDrawer('Nail Polish Changes')" class="px-4 py-2 rounded-full bg-noir-950 text-white text-xs font-semibold hover:bg-stone-800 transition-colors">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- 9. Nail Cut & Filing -->
+        <div class="py-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-noir-900 text-sm">Nail Cut & Filing</h4>
+            <p class="text-xs text-stone-500">Precision ergonomic cutting, symmetrical shaping (Almond/Square), buffing • 20 mins</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <span class="font-bold text-noir-900 text-base">₹299</span>
+            <button onclick="openBookingDrawer('Nail Cut & Filing')" class="px-4 py-2 rounded-full bg-noir-950 text-white text-xs font-semibold hover:bg-stone-800 transition-colors">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- 10. Nail Repair -->
+        <div class="py-4 flex items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-noir-900 text-sm">Nail Repair</h4>
+            <p class="text-xs text-stone-500">Emergency fix for chipped, cracked, or broken natural or extension nail • 15 mins</p>
+          </div>
+          <div class="flex items-center gap-4 text-right">
+            <span class="font-bold text-noir-900 text-base">₹149/nail</span>
+            <button onclick="openBookingDrawer('Nail Repair')" class="px-4 py-2 rounded-full bg-noir-950 text-white text-xs font-semibold hover:bg-stone-800 transition-colors">
+              Select
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Studio Visual Mood Grid (Instagram / Social Feed) -->
+  <section id="feed" class="py-16 md:py-24 bg-white border-b border-stone-200 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <span class="text-[11px] uppercase font-bold tracking-[0.25em] text-champagne block mb-1">Studio Moments</span>
+          <h2 class="font-editorial text-3xl sm:text-4xl font-light text-noir-950">Visual Feed</h2>
+        </div>
+        <a href="https://wa.me/917972622695?text=Hi%20Nails%20Galore%2C%20sending%20reference%20photo" target="_blank" class="text-xs uppercase font-bold tracking-widest text-noir-900 hover:text-champagne transition-colors flex items-center gap-1.5">
+          <span>Send Reference Photo</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <!-- 6-Photo Masonry Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
+        <div class="photo-card h-48 md:h-64" data-category="chrome" data-title="Glazed Chrome French" data-meta="Trending" data-price="₹1,799">
+          <img src="assets/images/hero.jpg" alt="Glazed Chrome French">
+        </div>
+        <div class="photo-card h-48 md:h-64" data-category="sculpt" data-title="Silver Pearls & Waves" data-meta="Couture 3D" data-price="₹1,899">
+          <img src="assets/images/art-showcase.jpg" alt="Silver Pearls and Waves">
+        </div>
+        <div class="photo-card h-48 md:h-64" data-category="pressons" data-title="Custom Press-On Set" data-meta="Velvet Box" data-price="₹1,299">
+          <img src="assets/images/press-ons.jpg" alt="Custom Press On Set">
+        </div>
+        <div class="photo-card h-48 md:h-64" data-category="studio" data-title="Sitabuldi Studio Interior" data-meta="Luxury Lounge" data-price="Salon Visit">
+          <img src="assets/images/studio.jpg" alt="Sitabuldi Studio Interior">
+        </div>
+        <div class="photo-card h-48 md:h-64" data-category="minimal" data-title="Clean Nude Gloss" data-meta="Natural Care" data-price="₹1,199">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Clean Nude">
+        </div>
+        <div class="photo-card h-48 md:h-64" data-category="extensions" data-title="Ombré Sculpted Apex" data-meta="Full Set" data-price="₹2,199">
+          <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=500&q=80" alt="Ombré Sculpted">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Google Reviews & Authentic Testimonials Section -->
+  <section id="reviews" class="py-16 md:py-24 bg-sand-100 border-b border-stone-200 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-[11px] uppercase font-bold tracking-[0.25em] text-champagne block mb-1">Google Verified</span>
+          <h2 class="font-editorial text-4xl sm:text-5xl font-light text-noir-950">Client Reviews</h2>
+          <p class="text-xs text-stone-500 mt-1">100% 5-Star Reviews from our Sitabuldi Studio profile on Google.</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://www.google.com/search?q=nails+galore+nagpur#lrd=0x3bd4c1c37e5586bd:0xac0ab2f3566ea2da,3,,," target="_blank" class="px-5 py-2.5 rounded-full bg-noir-950 text-white text-xs uppercase tracking-wider font-bold hover:bg-stone-800 transition-colors flex items-center gap-2 shadow">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-300 text-amber-300"></i>
+            <span>Rate & Review on Google</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 Real Review Cards from Prompt -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-stone-400 font-semibold">Google Review</span>
+            </div>
+            <p class="font-editorial text-xl italic text-noir-950 leading-snug">
+              “The quality, creativity, and attention to detail are amazing.”
+            </p>
+          </div>
+          <div class="pt-6 border-t border-stone-100 flex items-center justify-between text-xs mt-6">
+            <span class="font-bold text-noir-900">Verified Client</span>
+            <span class="text-stone-400">Soft Gel Extensions</span>
+          </div>
+        </div>
+
+        <!-- Review 2 (Highlighted) -->
+        <div class="bg-noir-950 text-white p-6 sm:p-8 rounded-3xl border border-stone-800 shadow-md flex flex-col justify-between relative overflow-hidden">
+          <div class="space-y-4 relative z-10">
+            <div class="flex items-center justify-between">
+              <div class="flex text-amber-300">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-champagne">Featured</span>
+            </div>
+            <p class="font-editorial text-2xl italic leading-snug text-sand-50">
+              “Professionally made and ate!! 🤏🏻💅🏻”
+            </p>
+          </div>
+          <div class="pt-6 border-t border-stone-800 flex items-center justify-between text-xs mt-6 relative z-10">
+            <span class="font-bold text-champagne">Verified Client</span>
+            <span class="text-stone-400">Nail Art & Extensions</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-stone-400 font-semibold">Google Review</span>
+            </div>
+            <p class="font-editorial text-xl italic text-noir-950 leading-snug">
+              “The team is professional, and my nail polish change looks perfect.”
+            </p>
+          </div>
+          <div class="pt-6 border-t border-stone-100 flex items-center justify-between text-xs mt-6">
+            <span class="font-bold text-noir-900">Verified Client</span>
+            <span class="text-stone-400">Nail Polish Change & Care</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Write a Review Callout -->
+      <div class="mt-8 bg-white p-6 rounded-2xl border border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div>
+          <h4 class="font-bold text-noir-900 text-sm">Have you visited Nails Galore recently?</h4>
+          <p class="text-xs text-stone-500 mt-0.5">Help others in Nagpur discover our bespoke studio with an honest Google review.</p>
+        </div>
+        <a href="https://www.google.com/search?q=nails+galore+nagpur#lrd=0x3bd4c1c37e5586bd:0xac0ab2f3566ea2da,3,,," target="_blank" class="px-6 py-2.5 rounded-full bg-champagne text-noir-950 font-bold text-xs uppercase tracking-wider hover:bg-amber-300 transition-colors shrink-0">
+          Write a Google Review →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Location & Visit Info Section (Minimal & Precise) -->
+  <section id="visit" class="py-16 md:py-24 bg-sand-50 border-b border-stone-200 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Details -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-[11px] uppercase font-bold tracking-[0.25em] text-champagne block mb-1">Find The Studio</span>
+            <h2 class="font-editorial text-4xl sm:text-5xl font-light text-noir-950">Nails Galore</h2>
+            <p class="text-xs text-stone-500 mt-1">5.0 Stars · 7 Google Reviews · Sitabuldi, Nagpur</p>
+          </div>
+
+          <div class="space-y-4 text-xs text-stone-700 bg-white p-6 rounded-2xl border border-stone-200">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-4 h-4 text-champagne shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-noir-900">Address</p>
+                <p class="text-stone-600 mt-0.5 leading-relaxed">
+                  2nd Floor, Iconic academy, RAHUL BAZAR COMPLEX, Shop no sf 13, Sitabuldi, Nagpur, Maharashtra 440013
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="clock" class="w-4 h-4 text-champagne shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-noir-900">Hours</p>
+                <p class="text-stone-600 mt-0.5">Monday – Sunday: 10:30 AM – 8:30 PM</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="phone" class="w-4 h-4 text-champagne shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-noir-900">Direct Telephone</p>
+                <a href="tel:07972622695" class="text-stone-600 hover:text-noir-900 font-semibold underline mt-0.5 block">
+                  079726 22695
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="message-circle" class="w-4 h-4 text-champagne shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-noir-900">WhatsApp Booking</p>
+                <a href="https://wa.me/917972622695?text=Hi%20Nails%20Galore%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="text-stone-600 hover:text-noir-900 font-semibold underline mt-0.5 block">
+                  +91 79726 22695
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a href="https://maps.google.com/maps?ftid=0x3bd4c1c37e5586bd:0xac0ab2f3566ea2da" target="_blank" class="px-6 py-3 rounded-full bg-noir-950 text-white text-xs uppercase tracking-wider font-bold hover:bg-stone-800 transition-colors flex items-center gap-2 shadow">
+              <i data-lucide="navigation" class="w-3.5 h-3.5 text-champagne"></i>
+              <span>Get Directions</span>
+            </a>
+            <a href="tel:07972622695" class="px-5 py-3 rounded-full border border-stone-300 text-noir-900 text-xs uppercase tracking-wider font-bold hover:border-noir-900 transition-colors">
+              Call Studio
+            </a>
+            <button onclick="openBookingDrawer()" class="px-5 py-3 rounded-full bg-champagne text-noir-950 text-xs uppercase tracking-wider font-bold hover:bg-amber-300 transition-colors">
+              Book Slot
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Map Embed -->
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden border border-stone-200 shadow-md">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.21855075677!2d79.080555!3d21.144444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1c37e5586bd%3A0xac0ab2f3566ea2da!2sNails%20galore!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="380" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              class="w-full h-[380px]"
+              title="Nails Galore Map Sitabuldi Nagpur">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Minimal Footer -->
+  <footer class="bg-noir-950 text-stone-400 py-10 border-t border-stone-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-editorial text-lg font-bold text-white uppercase tracking-wider">Nails Galore</span>
+        <span class="text-stone-600">·</span>
+        <span class="text-stone-400 text-[11px]">Rahul Bazar Complex, Sitabuldi, Nagpur (5.0★)</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.google.com/search?q=nails+galore+nagpur#lrd=0x3bd4c1c37e5586bd:0xac0ab2f3566ea2da,3,,," target="_blank" class="text-champagne hover:underline">Rate Us on Google (5.0★)</a>
+        <span class="text-stone-600">·</span>
+        <p class="text-[11px] text-stone-500">© 2026 Nails Galore. Minimal Nail Artistry & Extensions.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed Mobile Action Bar -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-stone-200 px-4 py-2.5 shadow-2xl flex items-center justify-between gap-2">
+    <a href="tel:07972622695" class="py-2.5 px-3 rounded-xl bg-stone-100 text-noir-950 border border-stone-300 font-bold text-xs flex items-center justify-center gap-1.5">
+      <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+      Call
+    </a>
+    <a href="https://wa.me/917972622695?text=Hi%20Nails%20Galore%2C%20I%20want%20to%20book%20an%20appointment" target="_blank" class="flex-1 py-2.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-300 font-bold text-xs flex items-center justify-center gap-1.5">
+      <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+      WhatsApp
+    </a>
+    <button onclick="openBookingDrawer()" class="flex-1 py-2.5 rounded-xl bg-noir-950 text-champagne font-bold text-xs flex items-center justify-center gap-1.5 shadow">
+      <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+      Book Slot
+    </button>
+  </div>
+
+  <!-- Fullscreen Image Lightbox Modal -->
+  <div id="image-lightbox" class="lightbox-modal fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 lightbox-hidden">
+    <div class="lightbox-content bg-noir-950 text-white w-full max-w-2xl rounded-3xl overflow-hidden border border-stone-800 shadow-2xl relative">
+      <button id="close-lightbox" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-noir-900/80 text-white flex items-center justify-center hover:bg-noir-800 transition-colors" aria-label="Close">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="h-96 sm:h-[450px] overflow-hidden bg-black flex items-center justify-center">
+        <img id="lightbox-image" src="" alt="Nail Art Fullview" class="w-full h-full object-cover">
+      </div>
+
+      <div class="p-6 bg-noir-900 flex items-center justify-between">
+        <div>
+          <span id="lightbox-meta" class="text-[10px] uppercase font-bold text-champagne tracking-widest block">Signature</span>
+          <h3 id="lightbox-title" class="font-editorial text-2xl font-normal">Gold French Manicure</h3>
+          <span id="lightbox-price" class="text-sm text-stone-300 font-bold">₹1,799</span>
+        </div>
+        <button id="lightbox-book-btn" class="px-6 py-3 rounded-full bg-champagne hover:bg-amber-300 text-noir-950 font-bold text-xs uppercase tracking-wider transition-colors shadow">
+          Book This Look
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimal 2-Step Booking Drawer -->
+  <div id="booking-drawer" class="lightbox-modal fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 lightbox-hidden">
+    <div class="lightbox-content bg-white w-full max-w-md rounded-3xl shadow-2xl border border-stone-200 overflow-hidden">
+      
+      <!-- Drawer Header -->
+      <div class="p-5 bg-sand-100 border-b border-stone-200 flex items-center justify-between">
+        <div>
+          <span class="text-[9px] uppercase font-bold tracking-widest text-champagne block">Fast Booking</span>
+          <h3 class="font-editorial text-2xl font-normal text-noir-950">Book Your Set</h3>
+        </div>
+        <button id="close-booking-drawer" class="p-1 rounded-full hover:bg-stone-200 text-stone-600 transition-colors" aria-label="Close">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Form Box -->
+      <div id="drawer-form-box" class="p-6 space-y-4">
+        <form id="booking-form" class="space-y-4">
+          
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Select Look / Service</label>
+            <select id="booking-style-select" class="w-full px-3 py-2.5 rounded-xl border border-stone-300 text-xs font-medium text-stone-800 focus:outline-none focus:border-noir-900">
+              <option value="Soft Gel Extensions">Soft Gel Extensions (₹1,799)</option>
+              <option value="Bespoke Nail Art">Bespoke Nail Art (₹499+)</option>
+              <option value="Nail Extensions (Acrylic/Hard Gel)">Nail Extensions (Acrylic / Hard Gel) (₹1,999)</option>
+              <option value="Custom Press On Nails Set">Custom Press On Nails Set (₹1,299)</option>
+              <option value="Nail Decals & 3D Charms">Nail Decals & 3D Charms (₹299+)</option>
+              <option value="Themed Nail Designs">Themed Nail Designs (Bridal/Festival) (₹699+)</option>
+              <option value="Nail Painting (Gel Polish)">Nail Painting (Express Gel Polish) (₹799)</option>
+              <option value="Nail Polish Changes">Nail Polish Changes (₹399)</option>
+              <option value="Nail Cut & Filing">Nail Cut & Filing (₹299)</option>
+              <option value="Nail Repair">Nail Repair (₹149/nail)</option>
+              <option value="Gold French Manicure">Gold French Manicure (₹1,799)</option>
+              <option value="Silver Chrome & Pearls">Silver Chrome Waves & Pearls (₹1,899)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Nail Shape</label>
+            <div class="grid grid-cols-4 gap-2 text-center text-xs">
+              <button type="button" class="shape-pill py-2 rounded-xl border border-stone-300 bg-white font-medium" data-shape="Natural">Natural</button>
+              <button type="button" class="shape-pill py-2 rounded-xl border border-stone-300 bg-white font-medium" data-shape="Square">Square</button>
+              <button type="button" class="shape-pill py-2 rounded-xl border-stone-900 bg-stone-900 text-white font-medium" data-shape="Almond">Almond</button>
+              <button type="button" class="shape-pill py-2 rounded-xl border border-stone-300 bg-white font-medium" data-shape="Coffin">Coffin</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Date</label>
+              <input type="date" id="booking-date-input" required class="w-full px-3 py-2 rounded-xl border border-stone-300 text-xs font-medium text-stone-800 focus:outline-none focus:border-noir-900">
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Time</label>
+              <select id="booking-time" class="w-full px-3 py-2 rounded-xl border border-stone-300 text-xs font-medium text-stone-800 focus:outline-none focus:border-noir-900">
+                <option value="11:30 AM">11:30 AM</option>
+                <option value="01:30 PM">01:30 PM</option>
+                <option value="03:30 PM" selected>03:30 PM</option>
+                <option value="05:30 PM">05:30 PM</option>
+                <option value="07:00 PM">07:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Name</label>
+              <input type="text" id="client-name" placeholder="Your Name" required class="w-full px-3 py-2 rounded-xl border border-stone-300 text-xs font-medium text-stone-800 focus:outline-none focus:border-noir-900">
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-stone-600 mb-1">Phone</label>
+              <input type="tel" id="client-phone" placeholder="Phone Number" required class="w-full px-3 py-2 rounded-xl border border-stone-300 text-xs font-medium text-stone-800 focus:outline-none focus:border-noir-900">
+            </div>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-2xl bg-noir-950 text-white font-bold text-xs uppercase tracking-wider hover:bg-stone-800 transition-colors shadow flex items-center justify-center gap-2">
+            <span>Send Request on WhatsApp</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-champagne"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Confirmation Screen -->
+      <div id="drawer-confirm-box" class="hidden p-6 text-center space-y-4">
+        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+          <i data-lucide="check" class="w-6 h-6"></i>
+        </div>
+        <h4 class="font-editorial text-2xl font-normal text-noir-950">Booking Sent!</h4>
+        <p class="text-xs text-stone-500">Your reservation details have been dispatched to Nails Galore WhatsApp (+91 79726 22695).</p>
+        
+        <div id="drawer-summary-content" class="my-2"></div>
+
+        <div class="flex gap-2">
+          <a id="btn-confirm-wa" href="#" target="_blank" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            Open WhatsApp
+          </a>
+          <button onclick="closeBookingDrawer(); resetBookingDrawer();" class="flex-1 py-3 rounded-xl bg-stone-100 text-stone-800 font-bold text-xs">
+            Done
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
